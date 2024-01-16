@@ -1,0 +1,28 @@
+{# templates/professeur/ajouter.html.twig #}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}AJOUT D'UN PROFESSEUR{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        {% include 'header.html.twig' %}
+        {% include 'footer.html.twig' %}
+        {% block body %}{% endblock %}
+        {% block javascripts %}{% endblock %}
+		<div class="container">
+    	<div class="d-flex align-items-center">
+		<h5>PAGE D'AJOUT D'UN PROFESSEUR</h5>
+        </div>
+		<table>
+        </br>
+        {{ form_start(form) }}{{ form_widget(form) }}
+        {{ form_end(form) }}</br>
+	<input type="button" class="btn btn-dark" value="Retour" onclick="history.back()">
+
+	</div>
+    </body>
+</html>
+
+

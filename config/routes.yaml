@@ -1,0 +1,130 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+# Login
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+app_register:
+    path: /register
+    controller: App\Controller\RegistrationController::register
+
+app_logout:
+    path: /logout
+    methods: GET
+
+# ACCUEIL
+route_accueil:
+    path: /accueil
+    controller: App\Controller\EtudiantController::index
+
+# ABOUT
+app_about:
+    path: /about
+    controller: App\Controller\AboutController::index
+
+# AJOUTER ETUDIANT
+ajouterEtudiant:
+    path: /etudiant/ajouter
+    controller: App\Controller\EtudiantController::ajouterEtudiant
+
+# CONSULTER ETUDIANT
+etudiantConsulter:
+    path: /etudiant/consulter/{id}
+    controller: App\Controller\EtudiantController::consulterEtudiant
+
+# LISTER ETUDIANT
+etudiantLister:
+    path: /etudiant/lister
+    controller: App\Controller\EtudiantController::listerEtudiant
+
+# MODIFIER ETUDIANT
+modifierEtudiant:
+    path: /etudiant/modifier/{id}
+    controller: App\Controller\EtudiantController::modifierEtudiant
+
+etudiantSupprimer:
+    path: /etudiant/supprimer/{id}
+    controller: App\Controller\EtudiantController::supprimerEtudiant
+
+# CONSULTER MAISON
+maisonConsulter:
+    path: /maison/consulter/{code}
+    controller: App\Controller\MaisonController::consulterMaison
+
+# LISTER MASION
+maisonLister:
+    path: /maison/lister
+    controller: App\Controller\MaisonController::listerMaison
+
+# AJOUTER MAISON
+ajouterMaison:
+    path: /maison/ajouter
+    controller: App\Controller\MaisonController::ajouterMaison
+
+# MODIFIER MAISON
+modifierMaison:
+    path: /maison/modifier/{id}
+    controller: App\Controller\MaisonController::modifierMaison
+
+# CONSULTER PROMOTION
+promotionConsulter:
+    path: /promotion/consulter/{code}
+    controller: App\Controller\PromotionController::consulterPromotion
+
+# CONSULTER BAGUETTE
+baguetteConsulter:
+    path: /baguette/consulter/{id}
+    controller: App\Controller\BaguetteController::consulterBaguette
+
+# AJOUTER UNE BAGUETTE MAGIQUE
+ajouterBaguette:
+    path: /baguette/ajouter
+    controller: App\Controller\BaguetteController::ajouterBaguette
+
+# LISTER PROFESSEUR
+professeurLister:
+    path: /professeur/lister
+    controller: App\Controller\ProfesseurController::listerProfesseur
+
+# CONSULTER PROFESSEUR
+professeurConsulter:
+    path: /professeur/consulter/{id}
+    controller: App\Controller\ProfesseurController::consulterProfesseur
+
+# AJOUTER PROFESSEUR
+ajouterProfesseur:
+    path: /professeur/ajouter
+    controller: App\Controller\ProfesseurController::ajouterProfesseur
+
+# MODIFIER PROFESSEUR
+modifierProfesseur:
+    path: /professeur/modifier/{id}
+    controller: App\Controller\ProfesseurController::modifierProfesseur
+
+# CONSULTER NOTE
+noteConsulter:
+    path: /note/consulter/{id}
+    controller: App\Controller\NoteController::consulterNote
+
+# AJOUTER NOTE
+ajouterNote:
+    path: /note/ajouter
+    controller: App\Controller\NoteController::ajouterNote
+
+# MODIFIER NOTE
+modifierNote:
+    path: /note/modifier/{id}
+    controller: App\Controller\NoteController::modifierNote
+
+# LISTER MATIERE
+matiereLister:
+    path: /matiere/lister
+    controller: App\Controller\MatiereController::listerMatiere
+
+# CONSULTER MATIERE
+matiereConsulter:
+    path: /matiere/consulter/{id}
+    controller: App\Controller\MatiereController::consulterMatiere
